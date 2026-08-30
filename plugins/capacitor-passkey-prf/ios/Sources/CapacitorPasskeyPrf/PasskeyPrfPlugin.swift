@@ -35,7 +35,7 @@ public class PasskeyPlugin: CAPPlugin, CAPBridgedPlugin {
     /// the `webcredentials:` entries in App.entitlements (and Android's
     /// assetlinks.json): a domain here the app is not associated with
     /// dead-ends the OS sheet.
-    private static let allowedRpIds: Set<String> = ["keys.breez.technology"]
+    private static let allowedRpIds: Set<String> = ["keys.hayabusawallet.com"]
 
     @objc func initialize(_ call: CAPPluginCall) {
         guard #available(iOS 18.0, *) else {

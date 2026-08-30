@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'technology.breez.glow',
-  appName: 'Glow',
+  appId: 'com.r-heit.hayabusa.glowspike',
+  appName: 'Hayabusa Spike',
   webDir: 'glow-web/dist',
   // SECURITY: pin Capacitor's bridge logging to "none" in every build.
   //

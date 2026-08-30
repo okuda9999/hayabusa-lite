@@ -73,7 +73,7 @@ class PasskeyPlugin : Plugin() {
          * entitlement): a domain here that the app is not associated with
          * dead-ends the OS sheet.
          */
-        val ALLOWED_RP_IDS = setOf("keys.breez.technology")
+        val ALLOWED_RP_IDS = setOf("keys.hayabusawallet.com")
     }
 
     @PluginMethod

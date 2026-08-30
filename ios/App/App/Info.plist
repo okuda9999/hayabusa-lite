@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-        <string>Glow</string>
+        <string>Hayabusa Spike</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -48,7 +48,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLName</key>
-			<string>technology.breez.glow.payments</string>
+			<string>com.r-heit.hayabusa.glowspike.payments</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>lightning</string>
@@ -67,10 +67,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Viewer</string>
 			<key>CFBundleURLName</key>
-			<string>technology.breez.glow</string>
+			<string>com.r-heit.hayabusa.glowspike</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>glow</string>
+				<string>hayabusa-spike</string>
 			</array>
 		</dict>
 	</array>
@@ -116,9 +116,9 @@
 	     describe passkeys: a user denying it based on the wrong
 	     description can only undo that in iOS Settings. -->
 	<key>NSFaceIDUsageDescription</key>
-	<string>Use Face ID to unlock Glow and to protect your recovery phrase on this device.</string>
+	<string>Use Face ID to unlock Hayabusa Spike and to protect your recovery phrase on this device.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Glow uses the camera to scan Lightning and Bitcoin payment QR codes.</string>
+	<string>Hayabusa Spike uses the camera to scan Lightning and Bitcoin payment QR codes.</string>
 	<!-- App Store export compliance (Phase 4C). Setting this to false
 	     skips the encryption-export questionnaire on every TestFlight
 	     upload — a hard requirement for `upload_to_testflight` to
