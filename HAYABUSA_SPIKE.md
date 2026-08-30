@@ -12,7 +12,12 @@ This branch is an isolated technical spike based on Breez Glow. It is not a prod
 - Validation URL scheme: `hayabusa-spike`
 - Candidate Passkey RP: `keys.hayabusawallet.com`
 
-The `upstream` remotes are fetch-only. GitHub `origin` remotes will be added after the Hayabusa forks exist.
+The `upstream` remotes are fetch-only. The writable Hayabusa forks are:
+
+- app `origin`: `https://github.com/okuda9999/hayabusa-lite.git`
+- web `origin`: `https://github.com/okuda9999/hayabusa-lite-web.git`
+
+The parent `.gitmodules` file points at the Hayabusa web fork. Breez remains available only through each repository's `upstream` remote.
 
 ## Reproduce the verified build
 
