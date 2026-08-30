@@ -40,12 +40,12 @@ xcodebuild -project ios/App/App.xcodeproj -scheme App \
 
 The verified `sdk-ios` target creates an iPhone device framework. It does not create the Simulator slice required for a Simulator build.
 
-## Deliberate blockers
+## Release blockers
 
-- Do not use Breez's Passkey RP. The code points at `keys.hayabusawallet.com`, which must have DNS, TLS, and a reviewed AASA before Passkey testing.
+- Do not use Breez's Passkey RP. The code points at the verified Hayabusa-owned RP `keys.hayabusawallet.com`.
 - Do not put a Breez API key in source control. Supply a Hayabusa-owned key through local or CI secrets only.
 - Do not switch to the existing production bundle ID or overwrite the existing Hayabusa TestFlight app.
-- Do not send mainnet funds from this spike. Signed-device onboarding, recovery, and small-value test-environment verification come first.
+- Do not treat the spike as production-ready. Separate-device recovery, payment-safety work, legal/App Store/security review, and deliberately small Mainnet interoperability testing remain mandatory.
 
 ## Current verification
 
@@ -54,5 +54,12 @@ The verified `sdk-ios` target creates an iPhone device framework. It does not cr
 - Spark iOS device SDK and Swift bindings: built at the pinned commit.
 - Capacitor iOS sync: passed with 17 plugins.
 - Generic iPhone Debug build without signing: passed with the validation bundle ID.
+- Apple Development signed build: passed with Team ID `C258H6NS96` and `webcredentials:keys.hayabusawallet.com`.
+- Physical iPhone install and launch: passed on iPhone 13 Pro.
+- Breez SDK initialization with the Git-ignored API-key configuration: passed.
+- New wallet, receive QR, Passkey registration with Face ID, and same-device full restart: passed.
+- No real Bitcoin has moved. Separate-device recovery and small-value Mainnet send/receive are not yet verified.
+
+The technical-spike decision is **Go** for using Glow as Hayabusa's base. This is not a TestFlight or App Store release decision. The legacy SwiftUI Regtest wallet is retained as a source for safety tests; transferring from that wallet to this Mainnet-oriented fork is not an active release gate.
 
 See the workspace ADRs and `docs/07_48時間スパイク実施記録.md` for decisions and open gates.

@@ -1,5 +1,7 @@
 # Glow App — Native Capacitor Wrapper
 
+> Hayabusa fork note (2026-08-30): this is the retained upstream roadmap, not the Hayabusa release plan. Use [HAYABUSA_SPIKE.md](HAYABUSA_SPIKE.md) and the workspace `開発TODO.md` for current Hayabusa status and priorities.
+
 Capacitor wrapper around the glow-web React + WASM Bitcoin wallet,
 distributed natively on iOS and Android. Architectural detail lives
 in [CLAUDE.md](CLAUDE.md); this file tracks what's next.

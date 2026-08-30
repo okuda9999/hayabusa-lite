@@ -1,5 +1,7 @@
 # Glow App
 
+> Hayabusa fork note (2026-08-30): this repository is the technical base for Hayabusa Lite. The upstream description below is preserved for architecture and attribution. Current Hayabusa verification and release gates are recorded in [HAYABUSA_SPIKE.md](HAYABUSA_SPIKE.md) and the workspace `開発TODO.md`; the upstream phase table is not the Hayabusa release status.
+
 [![CI](https://github.com/breez/glow-app/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/breez/glow-app/actions/workflows/ci.yml)
 
 Native iOS/Android wrapper for [Glow](https://github.com/breez/glow-web) PWA.
