@@ -33,14 +33,14 @@ final class KeychainSeedVault: SeedVaultProviding {
     /// Service identifier scoped to this app. Stable across builds so a
     /// reinstall finds the same Keychain entries (which `WhenUnlockedThisDeviceOnly`
     /// preserves on iOS).
-    private let service = "technology.breez.glow.native-vault"
+    private let service = "com.r-heit.hayabusa.glowspike.native-vault"
     private let account = "wallet-seed"
 
     /// Service identifier for the device-only tier (no biometric binding).
     /// Separate service keeps the two Keychain slots independent — clearing
     /// one never affects the other, and a non-passkey user never inherits
     /// a stale biometric-bound item.
-    private let deviceOnlyService = "technology.breez.glow.native-vault.device-only"
+    private let deviceOnlyService = "com.r-heit.hayabusa.glowspike.native-vault.device-only"
 
     func hasStoredSeed() -> Bool {
         var query = baseQuery()
@@ -98,7 +98,7 @@ final class KeychainSeedVault: SeedVaultProviding {
         // Provide a LAContext with our custom prompt copy so the
         // first-time store shows the right label.
         let writeContext = LAContext()
-        writeContext.localizedReason = "Protect Glow with biometric unlock"
+        writeContext.localizedReason = "Protect Hayabusa with biometric unlock"
         addQuery[kSecUseAuthenticationContext as String] = writeContext
 
         let addStatus = SecItemAdd(addQuery as CFDictionary, nil)
@@ -120,7 +120,7 @@ final class KeychainSeedVault: SeedVaultProviding {
         // would happen because the biometric evaluation can't get off
         // the ground.
         let readContext = LAContext()
-        readContext.localizedReason = "Unlock Glow"
+        readContext.localizedReason = "Unlock Hayabusa"
 
         var policyError: NSError?
         let canEvaluate = readContext.canEvaluatePolicy(

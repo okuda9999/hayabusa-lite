@@ -64,7 +64,7 @@ public class NativeVaultPlugin: CAPPlugin, CAPBridgedPlugin {
     /// Succeeding via passcode clears a biometry lockout — the JS layer
     /// offers this when `checkBiometry` reports BIOMETRIC_LOCKOUT.
     @objc func authenticateDeviceOwner(_ call: CAPPluginCall) {
-        let reason = call.getString("reason") ?? "Unlock Glow"
+        let reason = call.getString("reason") ?? "Unlock Hayabusa"
         biometric.authenticateDeviceOwner(
             reason: reason,
             onSuccess: {
@@ -81,7 +81,7 @@ public class NativeVaultPlugin: CAPPlugin, CAPBridgedPlugin {
     /// gating + lock screen), where the seed itself stays in the
     /// device-only tier so a PIN fallback can still start the app.
     @objc func authenticate(_ call: CAPPluginCall) {
-        let reason = call.getString("reason") ?? "Unlock Glow"
+        let reason = call.getString("reason") ?? "Unlock Hayabusa"
         biometric.authenticate(
             reason: reason,
             onSuccess: {
